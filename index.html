@@ -5,15 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片</title>
 
-  <!-- 分享卡片 -->
+  <!-- 分享卡片（OG / Twitter）。建議 og-cover.jpg 實體尺寸為 1200x630 -->
   <meta name="description" content="VicGether Tech. / POWAH ｜ 點一下即可撥打電話、寄信、開啟社群與官網。" />
   <meta property="og:title" content="Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片" />
   <meta property="og:description" content="點一下就能聯絡我：電話、Email、IG、LINE 官方、YouTube、TikTok、Shopee、官網。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/" />
-  <meta property="og:image" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg" />
+  <meta property="og:image" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251001" />
+  <meta property="og:image:secure_url" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251001" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" /> 
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="VicGether / POWAH 封面" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片" />
+  <meta name="twitter:description" content="點一下就能聯絡我：電話、Email、IG、LINE 官方、YouTube、TikTok、Shopee、官網。" />
+  <meta name="twitter:image" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251001" />
   <meta name="theme-color" content="#FDDC5C" />
 
   <style>
@@ -39,11 +46,14 @@
       border:1px solid #e5e5e5;
     }
 
-    /* Hero 頁首背景 */
+    /* ✅ Hero 改用 <img>，完整顯示，不裁切 */
     .hero{
-      width:50%;
-      height:auto; 
-      background:url('https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg') center/cover no-repeat;
+      background:#fff;
+    }
+    .hero img{
+      width:100%;
+      height:auto;         /* 依寬度等比縮放，保留整張圖 */
+      display:block;
     }
 
     .header{
@@ -55,13 +65,12 @@
       object-fit:cover;border:2px solid var(--ink);
     }
     .brand-logo{
-      width:256px;               /* ✅ 再放大一倍 */
-      height:auto;
-      object-fit:contain;
+      width:256px;         /* ✅ 再放大一倍 */
+      height:auto;object-fit:contain;
       border-radius:12px;
-      background:none;           /* ✅ 無外框背景 */
+      background:none;     /* ✅ 去背景 */
       padding:0;
-      border:none;               /* ✅ 移除邊框 */
+      border:none;         /* ✅ 去外框 */
     }
 
     .identity{text-align:center;padding:12px 20px;background:var(--card);border-top:1px solid #eee}
@@ -70,26 +79,16 @@
     .powah-logo{margin-top:8px;width:120px;height:auto}
 
     .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
-      gap:14px;
-      padding:20px
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+      gap:14px;padding:20px
     }
     .btn{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:16px;
-      text-decoration:none;
-      text-align:center;
-      color:var(--ink);
-      background:var(--brand-yellow);
-      border-radius:14px;
-      border:1px solid var(--ink);
-      transition:.2s;
-      font-weight:700;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      gap:8px;padding:16px;text-decoration:none;text-align:center;
+      color:var(--ink);                     /* 黑字 */
+      background:var(--brand-yellow);      /* 黃底 */
+      border-radius:14px;border:1px solid var(--ink);
+      transition:.2s;font-weight:700;
       box-shadow:0 2px 0 rgba(0,0,0,.2);
     }
     .btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 rgba(0,0,0,.2)}
@@ -105,8 +104,10 @@
   <main class="wrap">
     <section class="card">
 
-      <!-- Hero 封面 -->
-      <div class="hero" aria-label="VicGether / POWAH 封面"></div>
+      <!-- ✅ Hero：不裁切版本 -->
+      <div class="hero" aria-label="VicGether / POWAH 封面">
+        <img src="https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251001" alt="VicGether / POWAH 封面圖">
+      </div>
 
       <!-- 大頭照 + 公司 Logo -->
       <div class="header">
@@ -121,9 +122,8 @@
         <img class="powah-logo" src="POWAH.png" alt="POWAH 品牌 Logo" />
       </div>
 
-      <!-- 功能按鈕 -->
+      <!-- 功能按鈕（電話不顯示號碼） -->
       <div class="grid">
-        <!-- ✅ 按鈕顯示簡潔（不再顯示電話號碼） -->
         <a class="btn" href="tel:+886989722838">📞<span>電話</span></a>
         <a class="btn" href="mailto:victor.chiu@vicgether.com">✉️<span>Email</span></a>
         <a class="btn" href="https://www.vicgether.com" target="_blank">🌐<span>官網</span></a>
@@ -140,15 +140,15 @@
     </section>
   </main>
 
-  <!-- vCard 產生 -->
+  <!-- vCard：同時含英文名與中文名；iOS/Android 皆可匯入 -->
   <script>
     function downloadVCard(){
       const vcard = [
         'BEGIN:VCARD',
         'VERSION:3.0',
         'N:Chiu;Victor;;;',
-        'N;LANGUAGE=zh-TW:邱;建銓;;;',         // 中文姓名
-        'FN:Victor Chiu 邱建銓',              // 完整顯示
+        'N;LANGUAGE=zh-TW:邱;建銓;;;',  // 中文姓名
+        'FN:Victor Chiu 邱建銓',
         'ORG:VicGether Tech.',
         'TITLE:Founder & CEO',
         'TEL;TYPE=CELL:+886989722838',
@@ -157,7 +157,7 @@
         'item1.URL;type=pref:https://line.me/R/ti/p/@362wsfgp',
         'item1.X-ABLabel:LINE Official',
         'END:VCARD'
-      ].join('\r\n');
+      ].join('\\r\\n'); // CRLF
 
       const blob = new Blob([vcard], {type:'text/vcard;charset=utf-8'});
       const url = URL.createObjectURL(blob);
