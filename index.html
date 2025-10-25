@@ -16,20 +16,20 @@
   <meta name="theme-color" content="#FDDC5C" />
 
   <style>
-    :root{
+    :root {
       --brand-yellow:#FDDC5C;
       --ink:#000;
       --ink-2:#444;
       --card:#fff;
     }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;}
     body{
       margin:0;
-      font-family:"Noto Sans TC", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-family:"Noto Sans TC",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"PingFang TC","Microsoft JhengHei",sans-serif;
       background:var(--brand-yellow);
       color:var(--ink);
     }
-    .wrap{max-width:860px;margin:0 auto;padding:20px}
+    .wrap{max-width:860px;margin:0 auto;padding:20px;}
     .card{
       background:var(--card);
       border-radius:18px;
@@ -38,36 +38,40 @@
       border:1px solid #e5e5e5;
     }
 
-    /* Hero 圖（完整顯示） */
-    .hero img{width:100%;height:auto;display:block}
+    .hero img{width:100%;height:auto;display:block;}
 
-    /* Header 重新排列：大頭照 → 公司Logo → 品牌Logo */
+    /* Header 改為：頭像 + 姓名 + 職稱 */
     .header{
       text-align:center;
       background:#fff;
-      padding:24px 20px 10px;
+      padding:24px 20px 8px;
     }
-    .header p{margin:8px 0}
     .avatar{
       width:96px;height:96px;border-radius:50%;
       object-fit:cover;border:2px solid var(--ink);
     }
+    .identity h1{margin:12px 0 4px;font-size:22px;color:var(--ink);}
+    .identity .subtitle{margin:0;color:var(--ink-2);font-size:14px;}
+
+    /* 公司與品牌區 */
+    .brand-block{
+      text-align:center;
+      background:#fff;
+      padding:8px 20px 0;
+    }
     .brand-logo{
-      width:280px;height:auto;object-fit:contain;
-      display:inline-block;
+      width:260px;height:auto;object-fit:contain;
+      display:block;margin:8px auto 0;
     }
     .powah-logo{
       width:140px;height:auto;object-fit:contain;
-      display:inline-block;margin-top:4px;
+      display:block;margin:4px auto 8px;
     }
 
-    .identity{text-align:center;padding:12px 20px 8px;background:var(--card);}
-    .identity h1{margin:0;font-size:22px;color:var(--ink)}
-    .identity .subtitle{margin:6px 0 0;color:var(--ink-2);font-size:14px}
-
+    /* 功能按鈕 */
     .grid{
       display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
-      gap:14px;padding:20px
+      gap:14px;padding:20px;
     }
     .btn{
       display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -78,29 +82,33 @@
       transition:.2s;font-weight:700;
       box-shadow:0 2px 0 rgba(0,0,0,.2);
     }
-    .btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 rgba(0,0,0,.2)}
-    .note{padding:0 20px 20px;color:#333;font-size:13px;text-align:center}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 rgba(0,0,0,.2);}
+    .note{padding:0 20px 20px;color:#333;font-size:13px;text-align:center;}
   </style>
 </head>
+
 <body>
   <main class="wrap">
     <section class="card">
 
-      <!-- Hero 封面 -->
+      <!-- Hero 圖 -->
       <div class="hero">
         <img src="https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251025" alt="VicGether / POWAH 封面圖">
       </div>
 
-      <!-- 大頭照 + 公司 Logo + 品牌 -->
+      <!-- 大頭照 + 名字 + 職稱 -->
       <div class="header">
-        <p><img class="avatar" src="victor1.jpg" alt="Victor Chiu 邱建銓 個人照片" /></p>
-        <p><img class="powah-logo" src="POWAH.png" alt="POWAH 品牌 Logo" /></p>
+        <img class="avatar" src="victor1.jpg" alt="Victor Chiu 邱建銓 個人照片" />
+        <div class="identity">
+          <h1>Victor Chiu 邱建銓</h1>
+          <div class="subtitle">Founder & CEO｜VicGether Tech.｜POWAH ⚡</div>
+        </div>
       </div>
 
-      <!-- 名字 / 職稱 -->
-      <div class="identity">
-        <h1>Victor Chiu 邱建銓</h1>
-        <div class="subtitle">Founder & CEO｜VicGether Tech.｜POWAH ⚡</div>
+      <!-- 公司與品牌 -->
+      <div class="brand-block">
+        <img class="brand-logo" src="companylogo.png" alt="VicGether 公司 Logo" />
+        <img class="powah-logo" src="POWAH.png" alt="POWAH 品牌 Logo" />
       </div>
 
       <!-- 功能按鈕 -->
@@ -121,7 +129,7 @@
     </section>
   </main>
 
-  <!-- vCard 產生：改良版，支援 iOS/Android -->
+  <!-- vCard -->
   <script>
     function buildVCard() {
       return [
@@ -138,12 +146,11 @@
         'item1.URL;type=pref:https://line.me/R/ti/p/@362wsfgp',
         'item1.X-ABLabel:LINE 官方帳號',
         'END:VCARD'
-      ].join('\\r\\n');
+      ].join('\r\n');
     }
 
     function downloadVCard() {
       const vcard = buildVCard();
-
       try {
         const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
         const url = URL.createObjectURL(blob);
