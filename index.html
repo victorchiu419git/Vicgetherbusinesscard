@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片</title>
 
-  <!-- ========== [CONFIG - EDIT ONLY THIS BLOCK] 可調整區 ========== -->
+  <!-- ========== [CONFIG - 可編輯區] ========== -->
   <script>
     window.CONFIG = {
       name: "Victor Chiu 邱建銓",
@@ -20,12 +20,12 @@
         facebook: "https://www.facebook.com/share/1C4P71VM5o/?mibextid=wwXIfr",
         lineOfficial: "https://line.me/R/ti/p/@362wsfgp",
         shopee: "https://shopee.tw/victorchiu419",
-        vcf: "https://victorchiu419git.github.io/Vicgetherbusinesscard/VictorChiu.vcf",
-        digitalCard: "https://victorchiu419git.github.io/Vicgetherbusinesscard/BusinessCard.jpg"
+        vcf: "VictorChiu.vcf",
+        digitalCard: "BusinessCard.jpg"
       },
       assets: {
-        ogImage: "https://victorchiu419git.github.io/Vicgetherbusinesscard/victor1.jpg",
-        hero: "https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251027",
+        ogImage: "victor1.jpg",
+        hero: "og-cover.jpg?v=20251027",
         avatar: "victor1.jpg",
         companyLogo: "companylogo.png",
         powahLogo: "POWAH.png"
@@ -84,7 +84,7 @@
     }
     .btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 rgba(0,0,0,.2);}
 
-    /* 新增電子名片卡片 */
+    /* 電子名片 */
     .ecard{
       background:#fff;border-radius:14px;margin:0 20px 20px;
       padding:12px;text-align:center;border:1px solid #ddd;
@@ -107,8 +107,10 @@
   <main class="wrap">
     <section class="card">
 
+      <!-- Hero -->
       <div class="hero"><img id="heroImg" src="" alt="VicGether / POWAH 封面圖"></div>
 
+      <!-- 個人資訊 -->
       <div class="header">
         <img id="avatarImg" class="avatar" src="" alt="個人照片" />
         <div class="identity">
@@ -117,11 +119,13 @@
         </div>
       </div>
 
+      <!-- 公司 Logo + 品牌 Logo -->
       <div class="brand-block">
         <img id="companyLogo" class="brand-logo" src="" alt="VicGether 公司 Logo" />
         <img id="powahLogo" class="powah-logo" src="" alt="POWAH 品牌 Logo" />
       </div>
 
+      <!-- 按鈕群組 -->
       <div class="grid">
         <a class="btn" id="btnPhone" href="#"><span>📞 電話</span></a>
         <a class="btn" id="btnEmail" href="#"><span>✉️ Email</span></a>
@@ -135,16 +139,17 @@
         <a class="btn" id="btnVCF" href="#" target="_blank" rel="noopener"><span>📇 加入通訊錄</span></a>
       </div>
 
-      <!-- ✅ 新增電子名片區 -->
+      <!-- 電子名片區塊 -->
       <div class="ecard">
         <img id="ecardImg" src="" alt="電子名片預覽圖" />
-        <a id="ecardLink" href="#" target="_blank">🔗 查看電子名片</a>
+        <a id="ecardLink" href="#" download target="_blank">🔗 查看電子名片</a>
       </div>
 
       <p class="note">VicGether Tech. / POWAH © 2025 ｜ 貼到 LINE 後，點上方按鈕即可立即行動。</p>
     </section>
   </main>
 
+  <!-- Config 注入 -->
   <script>
     (function(c){
       document.getElementById('og-image').setAttribute('content', c.assets.ogImage);
