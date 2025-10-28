@@ -5,64 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片</title>
 
-  <!-- ✅ Social Preview -->
+  <!-- ========== [CONFIG - EDIT ONLY THIS BLOCK] 可調整區 ========== -->
+  <script>
+    window.CONFIG = {
+      name: "Victor Chiu 邱建銓",
+      title: "Founder & CEO｜VicGether Tech.｜POWAH ⚡",
+      phoneHref: "tel:+886989722838",
+      email: "victor.chiu@vicgether.com",
+      links: {
+        website: "https://www.vicgether.com",
+        instagram: "https://www.instagram.com/vicgethertech/",
+        tiktok: "https://www.tiktok.com/@vicgether.tech?_t=ZS-90qMOTdQT6V&_r=1",
+        youtube: "https://youtube.com/@vicgether?si=uqOinQYygeARqoPt",
+        facebook: "https://www.facebook.com/share/1C4P71VM5o/?mibextid=wwXIfr",
+        lineOfficial: "https://line.me/R/ti/p/@362wsfgp",
+        shopee: "https://shopee.tw/victorchiu419",
+        vcf: "https://victorchiu419git.github.io/Vicgetherbusinesscard/VictorChiu.vcf",
+        digitalCard: "https://victorchiu419git.github.io/Vicgetherbusinesscard/BusinessCard.jpg"
+      },
+      assets: {
+        ogImage: "https://victorchiu419git.github.io/Vicgetherbusinesscard/victor1.jpg",
+        hero: "https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251027",
+        avatar: "victor1.jpg",
+        companyLogo: "companylogo.png",
+        powahLogo: "POWAH.png"
+      }
+    };
+  </script>
+  <!-- ========== END CONFIG ========== -->
+
   <meta name="description" content="VicGether Tech. / POWAH ｜ 點一下即可撥打電話、寄信、開啟社群與官網。" />
   <meta property="og:title" content="Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片" />
   <meta property="og:description" content="點一下就能聯絡我：電話、Email、IG、LINE 官方、YouTube、TikTok、Shopee、官網。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/" />
-  <meta property="og:image" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/victor1.jpg" />
+  <meta property="og:image" content="" id="og-image" />
   <meta property="og:image:width" content="600" />
   <meta property="og:image:height" content="600" />
-  <meta property="og:image:alt" content="Victor Chiu 邱建銓 個人照片" />
   <meta name="theme-color" content="#FDDC5C" />
 
   <style>
-    :root {
-      --brand-yellow:#FDDC5C;
-      --ink:#000;
-      --ink-2:#444;
-      --card:#fff;
-    }
+    :root { --brand-yellow:#FDDC5C; --ink:#000; --ink-2:#444; --card:#fff; }
     *{box-sizing:border-box;}
     body{
-      margin:0;
+      margin:0;background:var(--brand-yellow);color:var(--ink);
       font-family:"Noto Sans TC",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"PingFang TC","Microsoft JhengHei",sans-serif;
-      background:var(--brand-yellow);
-      color:var(--ink);
     }
     .wrap{max-width:860px;margin:0 auto;padding:20px;}
     .card{
-      background:var(--card);
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 6px 20px rgba(0,0,0,.15);
-      border:1px solid #e5e5e5;
+      background:var(--card);border-radius:18px;overflow:hidden;
+      box-shadow:0 6px 20px rgba(0,0,0,.15);border:1px solid #e5e5e5;
     }
 
     .hero img{width:100%;height:auto;display:block;}
 
-    /* Header：頭像 + 姓名 + 職稱 */
-    .header{text-align:top;background:#fff;padding:24px 20px 8px;}
+    .header{text-align:center;background:#fff;padding:24px 20px 8px;}
     .avatar{
       width:110px;height:110px;border-radius:50%;
-      object-fit:cover;border:2px solid var(--ink);
+      object-fit:cover;object-position:top center;border:2px solid var(--ink);
     }
     .identity h1{margin:12px 0 4px;font-size:22px;color:var(--ink);}
     .identity .subtitle{margin:0;color:var(--ink-2);font-size:14px;}
 
-    /* 公司與品牌區 */
     .brand-block{text-align:center;background:#fff;padding:8px 20px 0;}
-    .brand-logo{
-      width:320px;height:auto;object-fit:contain;
-      display:block;margin:8px auto 0;
-    }
-    .powah-logo{
-      width:150px;height:auto;object-fit:contain;
-      display:block;margin:4px auto 8px;
-    }
+    .brand-logo{width:320px;height:auto;object-fit:contain;display:block;margin:8px auto 0;}
+    .powah-logo{width:150px;height:auto;object-fit:contain;display:block;margin:4px auto 8px;}
 
-    /* 功能按鈕 */
     .grid{
       display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
       gap:14px;padding:20px;
@@ -70,100 +78,95 @@
     .btn{
       display:flex;flex-direction:column;align-items:center;justify-content:center;
       gap:8px;padding:16px;text-decoration:none;text-align:center;
-      color:var(--ink);
-      background:var(--brand-yellow);
+      color:var(--ink);background:var(--brand-yellow);
       border-radius:14px;border:1px solid var(--ink);
-      transition:.2s;font-weight:700;
-      box-shadow:0 2px 0 rgba(0,0,0,.2);
+      transition:.2s;font-weight:700;box-shadow:0 2px 0 rgba(0,0,0,.2);
     }
     .btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 rgba(0,0,0,.2);}
+
+    /* 新增電子名片卡片 */
+    .ecard{
+      background:#fff;border-radius:14px;margin:0 20px 20px;
+      padding:12px;text-align:center;border:1px solid #ddd;
+      box-shadow:0 2px 8px rgba(0,0,0,.1);
+    }
+    .ecard img{
+      width:100%;max-width:400px;border-radius:12px;
+      display:block;margin:0 auto 10px;
+    }
+    .ecard a{
+      text-decoration:none;font-weight:700;color:var(--ink);
+      background:var(--brand-yellow);padding:10px 16px;
+      border-radius:10px;display:inline-block;border:1px solid var(--ink);
+    }
+
     .note{padding:0 20px 20px;color:#333;font-size:13px;text-align:center;}
   </style>
 </head>
-
 <body>
   <main class="wrap">
     <section class="card">
 
-      <!-- Hero 封面 -->
-      <div class="hero">
-        <img src="https://victorchiu419git.github.io/Vicgetherbusinesscard/og-cover.jpg?v=20251026" alt="VicGether / POWAH 封面圖">
-      </div>
+      <div class="hero"><img id="heroImg" src="" alt="VicGether / POWAH 封面圖"></div>
 
-      <!-- 頭像 + 姓名職稱 -->
       <div class="header">
-        <img class="avatar" src="victor1.jpg" alt="Victor Chiu 邱建銓 個人照片" />
+        <img id="avatarImg" class="avatar" src="" alt="個人照片" />
         <div class="identity">
-          <h1>Victor Chiu 邱建銓</h1>
-          <div class="subtitle">Founder & CEO｜VicGether Tech.｜POWAH ⚡</div>
+          <h1 id="nameText"></h1>
+          <div id="titleText" class="subtitle"></div>
         </div>
       </div>
 
-      <!-- 公司 Logo + 品牌 Logo -->
       <div class="brand-block">
-        <img class="brand-logo" src="companylogo.png" alt="VicGether 公司 Logo" />
-        <img class="powah-logo" src="POWAH.png" alt="POWAH 品牌 Logo" />
+        <img id="companyLogo" class="brand-logo" src="" alt="VicGether 公司 Logo" />
+        <img id="powahLogo" class="powah-logo" src="" alt="POWAH 品牌 Logo" />
       </div>
 
-      <!-- 功能按鈕 -->
       <div class="grid">
-        <a class="btn" href="tel:+886989722838">📞<span>電話</span></a>
-        <a class="btn" href="mailto:victor.chiu@vicgether.com">✉️<span>Email</span></a>
-        <a class="btn" href="https://www.vicgether.com" target="_blank">🌐<span>官網</span></a>
-        <a class="btn" href="https://www.instagram.com/vicgethertech/" target="_blank">📸<span>Instagram</span></a>
-        <a class="btn" href="https://www.tiktok.com/@vicgether.tech?_t=ZS-90qMOTdQT6V&_r=1" target="_blank">🎵<span>TikTok</span></a>
-        <a class="btn" href="https://youtube.com/@vicgether?si=uqOinQYygeARqoPt" target="_blank">▶️<span>YouTube</span></a>
-        <a class="btn" href="https://www.facebook.com/share/1C4P71VM5o/?mibextid=wwXIfr" target="_blank">📘<span>Facebook</span></a>
-        <a class="btn" href="https://line.me/R/ti/p/@362wsfgp" target="_blank">💬<span>LINE 官方</span></a>
-        <a class="btn" href="https://shopee.tw/victorchiu419" target="_blank">🛒<span>Shopee 商店</span></a>
-        <a class="btn" href="#" onclick="return downloadVCard();" rel="noopener">📇<span>加入通訊錄</span></a>
+        <a class="btn" id="btnPhone" href="#"><span>📞 電話</span></a>
+        <a class="btn" id="btnEmail" href="#"><span>✉️ Email</span></a>
+        <a class="btn" id="btnWeb" href="#" target="_blank"><span>🌐 官網</span></a>
+        <a class="btn" id="btnIG" href="#" target="_blank"><span>📸 Instagram</span></a>
+        <a class="btn" id="btnTikTok" href="#" target="_blank"><span>🎵 TikTok</span></a>
+        <a class="btn" id="btnYT" href="#" target="_blank"><span>▶️ YouTube</span></a>
+        <a class="btn" id="btnFB" href="#" target="_blank"><span>📘 Facebook</span></a>
+        <a class="btn" id="btnLINE" href="#" target="_blank"><span>💬 LINE 官方</span></a>
+        <a class="btn" id="btnShopee" href="#" target="_blank"><span>🛒 Shopee 商店</span></a>
+        <a class="btn" id="btnVCF" href="#" target="_blank" rel="noopener"><span>📇 加入通訊錄</span></a>
       </div>
 
-      <p class="note">VicGether Technology Co., Ltd. / POWAH © 2025  </p>
+      <!-- ✅ 新增電子名片區 -->
+      <div class="ecard">
+        <img id="ecardImg" src="" alt="電子名片預覽圖" />
+        <a id="ecardLink" href="#" target="_blank">🔗 查看電子名片</a>
+      </div>
+
+      <p class="note">VicGether Tech. / POWAH © 2025 ｜ 貼到 LINE 後，點上方按鈕即可立即行動。</p>
     </section>
   </main>
 
-  <!-- vCard JS -->
   <script>
-    function buildVCard() {
-      return [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        'N:Chiu;Victor;;;',
-        'N;LANGUAGE=zh-TW:邱;建銓;;;',
-        'FN:Victor Chiu 邱建銓',
-        'ORG:VicGether Technology Co., Ltd.',
-        'TITLE:Founder & CEO',
-        'TEL;TYPE=CELL:+886989722838',
-        'EMAIL;TYPE=INTERNET:victor.chiu@vicgether.com',
-        'URL:https://www.vicgether.com',
-        'item1.URL;type=pref:https://line.me/R/ti/p/@362wsfgp',
-        'item1.X-ABLabel:LINE 官方帳號',
-        'END:VCARD'
-      ].join('\r\n');
-    }
-
-    function downloadVCard() {
-      const vcard = buildVCard();
-      try {
-        const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'VictorChiu.vcf';
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(() => {
-          URL.revokeObjectURL(url);
-          a.remove();
-        }, 100);
-        return false;
-      } catch (e) {
-        const dataUrl = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
-        window.location.href = dataUrl;
-        return false;
-      }
-    }
+    (function(c){
+      document.getElementById('og-image').setAttribute('content', c.assets.ogImage);
+      document.getElementById('heroImg').src = c.assets.hero;
+      document.getElementById('avatarImg').src = c.assets.avatar;
+      document.getElementById('companyLogo').src = c.assets.companyLogo;
+      document.getElementById('powahLogo').src = c.assets.powahLogo;
+      document.getElementById('ecardImg').src = c.links.digitalCard;
+      document.getElementById('ecardLink').href = c.links.digitalCard;
+      document.getElementById('nameText').textContent = c.name;
+      document.getElementById('titleText').textContent = c.title;
+      document.getElementById('btnPhone').href  = c.phoneHref;
+      document.getElementById('btnEmail').href  = "mailto:" + c.email;
+      document.getElementById('btnWeb').href    = c.links.website;
+      document.getElementById('btnIG').href     = c.links.instagram;
+      document.getElementById('btnTikTok').href = c.links.tiktok;
+      document.getElementById('btnYT').href     = c.links.youtube;
+      document.getElementById('btnFB').href     = c.links.facebook;
+      document.getElementById('btnLINE').href   = c.links.lineOfficial;
+      document.getElementById('btnShopee').href = c.links.shopee;
+      document.getElementById('btnVCF').href    = c.links.vcf;
+    })(window.CONFIG);
   </script>
 </body>
 </html>
