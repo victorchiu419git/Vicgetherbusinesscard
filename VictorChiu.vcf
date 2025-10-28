@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Chiu;Victor;;;
+N;LANGUAGE=zh-TW:邱;建銓 Victor;;;
+FN:Victor Chiu 邱建銓
+ORG:VicGether Technology Co., Ltd.
+TITLE:Founder & CEO
+TEL;TYPE=CELL:+886989722838
+EMAIL;TYPE=INTERNET:victor.chiu@vicgether.com
+URL:https://www.vicgether.com
+item1.URL;type=pref:https://line.me/R/ti/p/@362wsfgp
+item1.X-ABLabel:LINE 官方帳號
+END:VCARD
