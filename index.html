@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Victor Chiu｜VicGether Technology Co., Ltd.｜POWAH 名片</title>
 
-  <!-- ====== 靜態 OG（LINE/FB 預覽；不可用 JS 改） ====== -->
+  <!-- ====== Static OG (LINE/FB read this; do not change via JS) ====== -->
   <meta name="description" content="VicGether Technology Co., Ltd. / POWAH ｜ 點一下即可撥打電話、寄信、開啟社群與官網。" />
   <meta property="og:title" content="Victor Chiu（邱建銓）｜VicGether Technology Co., Ltd.｜POWAH 數位名片" />
   <meta property="og:description" content="電話、Email、IG、LINE 官方、YouTube、TikTok、Shopee、官網，一鍵直達。" />
@@ -17,21 +17,18 @@
   <meta property="og:image:alt" content="Victor Chiu 個人照片" />
   <meta name="theme-color" content="#FDDC5C" />
 
-  <!-- ====== CONFIG（上層可編輯區，改這段就好） ====== -->
+  <!-- ====== CONFIG (edit only this block) ====== -->
   <script>
     window.CONFIG = {
       defaultLang: "zh", // zh / en / ja
-      name: {
-        en: "Victor Chiu",
-        zh: "邱建銓",
-        ja: "ビクター・チウ"
-      },
+      name: { en: "Victor Chiu", zh: "邱建銓", ja: "ビクター・チウ" },
       title: {
         en: "Founder & CEO｜VicGether Tech.｜POWAH ⚡",
         zh: "Founder & CEO｜VicGether Tech.｜POWAH ⚡",
         ja: "代表取締役社長｜VicGether Tech.｜POWAH ⚡"
       },
-      // 連結（不隨語言變）
+
+      // links (do not change with language)
       phoneHref: "tel:+886989722838",
       email: "victor.chiu@vicgether.com",
       links: {
@@ -45,62 +42,43 @@
         vcf: "VictorChiu.vcf",
         digitalCard: "BusinessCard.jpg"
       },
-      // 靜態資產
+
+      // assets
       assets: {
         hero: "og-cover.jpg?v=20251027",
         avatar: "victor4.jpg",
         companyLogo: "companylogo.png",
         powahLogo: "POWAH.png"
       },
-      // 多語字典（按鈕文字 / footer）
+
+      // button labels & footer (no extra sentence)
       i18n: {
         zh: {
-          phone: "電話",
-          email: "Email",
-          website: "官網",
-          instagram: "Instagram",
-          tiktok: "TikTok",
-          youtube: "YouTube",
-          facebook: "Facebook",
-          lineOfficial: "LINE 官方",
-          shopee: "Shopee 商店",
-          addToContacts: "加入通訊錄",
-          viewECard: "查看電子名片",
+          phone: "打給我", email: "Email", website: "亦啟官網", instagram: "Instagram",
+          tiktok: "TikTok", youtube: "YouTube", facebook: "Facebook",
+          lineOfficial: "LINE 官方", shopee: "Shopee 商店",
+          addToContacts: "加入通訊錄", viewECard: "查看電子名片",
           footer: "VicGether Technology Co., Ltd. / POWAH © 2025"
         },
         en: {
-          phone: "Phone",
-          email: "Email",
-          website: "Website",
-          instagram: "Instagram",
-          tiktok: "TikTok",
-          youtube: "YouTube",
-          facebook: "Facebook",
-          lineOfficial: "LINE Official",
-          shopee: "Shopee Store",
-          addToContacts: "Add to Contacts",
-          viewECard: "View e-Business Card",
+          phone: "Call Me", email: "Email", website: "Website", instagram: "Instagram",
+          tiktok: "TikTok", youtube: "YouTube", facebook: "Facebook",
+          lineOfficial: "LINE", shopee: "Shopee Store",
+          addToContacts: "Add Contacts", viewECard: "View e-Business Card",
           footer: "VicGether Technology Co., Ltd. / POWAH © 2025"
         },
         ja: {
-          phone: "電話",
-          email: "メール",
-          website: "公式サイト",
-          instagram: "インスタグラム",
-          tiktok: "TikTok",
-          youtube: "YouTube",
-          facebook: "Facebook",
-          lineOfficial: "LINE公式",
-          shopee: "Shopeeストア",
-          addToContacts: "連絡先に追加",
-          viewECard: "電子名刺を表示",
-          footer: "VicGether Technology Co., Ltd. / POWAH © 2025 "
+          phone: "電話", email: "メール", website: "公式サイト", instagram: "インスタグラム",
+          tiktok: "TikTok", youtube: "YouTube", facebook: "Facebook",
+          lineOfficial: "LINE公式", shopee: "Shopeeストア",
+          addToContacts: "連絡先に追加", viewECard: "電子名刺を表示",
+          footer: "VicGether Technology Co., Ltd. / POWAH © 2025"
         }
       }
     };
   </script>
 
-  <!-- ====== 樣式（下層固定設計區，請勿更動） ====== -->
+  <!-- ====== Styles (do not edit) ====== -->
   <style>
     :root { --brand-yellow:#FDDC5C; --ink:#000; --ink-2:#444; --card:#fff; }
     *{box-sizing:border-box;}
@@ -114,10 +92,10 @@
       box-shadow:0 6px 20px rgba(0,0,0,.15);border:1px solid #e5e5e5;
     }
 
-    /* Hero */
+    /* hero */
     .hero img{width:100%;height:auto;display:block;}
 
-    /* Header：頭像＋姓名職稱 */
+    /* header */
     .header{text-align:center;background:#fff;padding:24px 20px 8px;position:relative;}
     .avatar{
       width:110px;height:110px;border-radius:50%;
@@ -126,7 +104,7 @@
     .identity h1{margin:12px 0 4px;font-size:22px;color:var(--ink);}
     .identity .subtitle{margin:0;color:var(--ink-2);font-size:14px;}
 
-    /* 語言切換（右上角） */
+    /* lang switch */
     .lang-switch{
       position:absolute;top:10px;right:10px;display:flex;gap:6px;
       background:rgba(255,255,255,0.85);border:1px solid #ddd;border-radius:999px;padding:4px 6px;
@@ -137,12 +115,12 @@
     }
     .lang-btn.active{background:var(--brand-yellow);border:1px solid var(--ink);}
 
-    /* 公司與品牌 */
+    /* brand */
     .brand-block{text-align:center;background:#fff;padding:8px 20px 0;}
     .brand-logo{width:320px;height:auto;object-fit:contain;display:block;margin:8px auto 0;}
     .powah-logo{width:150px;height:auto;object-fit:contain;display:block;margin:4px auto 8px;}
 
-    /* 按鈕群 */
+    /* buttons */
     .grid{
       display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
       gap:14px;padding:20px;
@@ -158,10 +136,10 @@
     .btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 rgba(0,0,0,.2);}
     .btn .icon{
       width:28px;height:28px;object-fit:contain;display:block;flex:0 0 28px;
-      filter: saturate(1.1) contrast(1.05);
+      image-rendering: -webkit-optimize-contrast;
     }
 
-    /* 電子名片卡 */
+    /* e-card block */
     .ecard{
       background:#fff;border-radius:14px;margin:0 20px 20px;
       padding:12px;text-align:center;border:1px solid #ddd;
@@ -184,15 +162,15 @@
   <main class="wrap">
     <section class="card">
 
-      <!-- Hero -->
+      <!-- hero -->
       <div class="hero"><img id="heroImg" src="" alt="VicGether / POWAH 封面圖"></div>
 
-      <!-- 個人資訊 -->
+      <!-- header -->
       <div class="header">
-        <!-- 語言切換 -->
+        <!-- lang switch -->
         <div class="lang-switch" aria-label="language switch">
-          <button class="lang-btn" data-lang="zh">中</button>
-          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh">中文</button>
+          <button class="lang-btn" data-lang="en">ENG</button>
           <button class="lang-btn" data-lang="ja">日本語</button>
         </div>
 
@@ -203,60 +181,60 @@
         </div>
       </div>
 
-      <!-- 公司 Logo + 品牌 Logo -->
+      <!-- brand -->
       <div class="brand-block">
         <img id="companyLogo" class="brand-logo" src="" alt="VicGether 公司 Logo" />
         <img id="powahLogo" class="powah-logo" src="" alt="POWAH 品牌 Logo" />
       </div>
 
-      <!-- 按鈕群組（icon 改 .jpg） -->
+      <!-- button grid (PNG icons) -->
       <div class="grid">
         <a class="btn" id="btnPhone" href="#">
-          <img class="icon" src="icon_phone.jpg" alt="Phone" /><span id="txtPhone">Phone</span>
+          <img class="icon" src="icon_phone.png" alt="Phone" /><span id="txtPhone">Phone</span>
         </a>
         <a class="btn" id="btnEmail" href="#">
-          <img class="icon" src="icon_email.jpg" alt="Email" /><span id="txtEmail">Email</span>
+          <img class="icon" src="icon_email.png" alt="Email" /><span id="txtEmail">Email</span>
         </a>
         <a class="btn" id="btnWeb" href="#" target="_blank">
-          <img class="icon" src="icon_website.jpg" alt="Website" /><span id="txtWeb">Website</span>
+          <img class="icon" src="icon_website.png" alt="Website" /><span id="txtWeb">Website</span>
         </a>
         <a class="btn" id="btnIG" href="#" target="_blank">
-          <img class="icon" src="icon_instagram.jpg" alt="Instagram" /><span id="txtIG">Instagram</span>
+          <img class="icon" src="icon_instagram.png" alt="Instagram" /><span id="txtIG">Instagram</span>
         </a>
         <a class="btn" id="btnTikTok" href="#" target="_blank">
-          <img class="icon" src="icon_tiktok.jpg" alt="TikTok" /><span id="txtTikTok">TikTok</span>
+          <img class="icon" src="icon_tiktok.png" alt="TikTok" /><span id="txtTikTok">TikTok</span>
         </a>
         <a class="btn" id="btnYT" href="#" target="_blank">
-          <img class="icon" src="icon_youtube.jpg" alt="YouTube" /><span id="txtYT">YouTube</span>
+          <img class="icon" src="icon_youtube.png" alt="YouTube" /><span id="txtYT">YouTube</span>
         </a>
         <a class="btn" id="btnFB" href="#" target="_blank">
-          <img class="icon" src="icon_facebook.jpg" alt="Facebook" /><span id="txtFB">Facebook</span>
+          <img class="icon" src="icon_facebook.png" alt="Facebook" /><span id="txtFB">Facebook</span>
         </a>
         <a class="btn" id="btnLINE" href="#" target="_blank">
-          <img class="icon" src="icon_line.jpg" alt="LINE" /><span id="txtLINE">LINE 官方</span>
+          <img class="icon" src="icon_line.png" alt="LINE" /><span id="txtLINE">LINE 官方</span>
         </a>
         <a class="btn" id="btnShopee" href="#" target="_blank">
-          <img class="icon" src="icon_shopee.jpg" alt="Shopee" /><span id="txtShopee">Shopee 商店</span>
+          <img class="icon" src="icon_shopee.png" alt="Shopee" /><span id="txtShopee">Shopee 商店</span>
         </a>
         <a class="btn" id="btnVCF" href="#" target="_blank" rel="noopener">
-          <img class="icon" src="icon_vcf.jpg" alt="vCard" /><span id="txtVCF">加入通訊錄</span>
+          <img class="icon" src="icon_vcf.png" alt="vCard" /><span id="txtVCF">加入通訊錄</span>
         </a>
       </div>
 
-      <!-- 電子名片 -->
+      <!-- e-card -->
       <div class="ecard">
         <img id="ecardImg" src="" alt="電子名片預覽圖" />
         <a id="ecardLink" href="#" download target="_blank">🔗 <span id="txtECard">查看電子名片</span></a>
       </div>
 
-      <p class="note" id="footerText">VicGether Technology Co., Ltd. / POWAH © 2025 </p>
+      <p class="note" id="footerText">VicGether Technology Co., Ltd. / POWAH © 2025</p>
     </section>
   </main>
 
-  <!-- ====== JS（下層固定設計區） ====== -->
+  <!-- ====== JS (do not edit) ====== -->
   <script>
     (function app(c) {
-      // 圖片與固定資源
+      // images & assets
       document.getElementById('heroImg').src = c.assets.hero;
       document.getElementById('avatarImg').src = c.assets.avatar;
       document.getElementById('companyLogo').src = c.assets.companyLogo;
@@ -264,7 +242,7 @@
       document.getElementById('ecardImg').src = c.links.digitalCard;
       document.getElementById('ecardLink').href = c.links.digitalCard;
 
-      // 連結
+      // links
       document.getElementById('btnPhone').href  = c.phoneHref;
       document.getElementById('btnEmail').href  = "mailto:" + c.email;
       document.getElementById('btnWeb').href    = c.links.website;
@@ -276,25 +254,22 @@
       document.getElementById('btnShopee').href = c.links.shopee;
       document.getElementById('btnVCF').href    = c.links.vcf;
 
-      // 姓名格式統一：英文名在前，中文/日文在後（依語言自動換括號樣式）
+      // unified name rule: EN first, then Local (ZH/JA) in brackets
       function formattedName(lang) {
         var en = c.name.en, zh = c.name.zh, ja = c.name.ja;
-        if (lang === 'ja') return `${en}（${ja}）`; // 全形括號
-        if (lang === 'zh') return `${en}（${zh}）`; // 全形括號
-        return `${en} (${zh})`; // EN 視圖也採 英文(中文)
+        if (lang === 'ja') return `${en}（${ja}）`;
+        if (lang === 'zh') return `${en}（${zh}）`;
+        return `${en} (${zh})`;
       }
 
-      // 多語文本
+      // language handling
       const btns = document.querySelectorAll('.lang-btn');
       function applyLang(lang){
-        // 切按鈕狀態
         btns.forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
 
-        // 姓名 / 職稱
         document.getElementById('nameText').textContent  = formattedName(lang);
         document.getElementById('titleText').textContent = c.title[lang] || c.title.en;
 
-        // 按鈕文字 / footer
         const t = (c.i18n[lang] || c.i18n.en);
         document.getElementById('txtPhone').textContent   = t.phone;
         document.getElementById('txtEmail').textContent   = t.email;
@@ -309,17 +284,14 @@
         document.getElementById('txtECard').textContent   = t.viewECard;
         document.getElementById('footerText').textContent = t.footer;
 
-        // <html lang="...">
         document.documentElement.lang = (lang==='zh'?'zh-Hant':lang);
         try{ localStorage.setItem('lang', lang); }catch(e){}
       }
 
-      // 初始語言
       let initLang = c.defaultLang;
       try{ const saved = localStorage.getItem('lang'); if(saved) initLang = saved; }catch(e){}
       applyLang(initLang);
 
-      // 綁定切換
       btns.forEach(b=>b.addEventListener('click', ()=>applyLang(b.dataset.lang)));
     })(window.CONFIG);
   </script>
