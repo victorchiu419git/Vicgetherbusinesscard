@@ -3,13 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片</title>
+  <title>Victor Chiu 邱建銓｜VicGether Technology Co., Ltd.｜POWAH 數位名片</title>
 
-  <!-- ========== [CONFIG - 可編輯區] ========== -->
+  <!-- ====== [靜態 OG META for LINE / FB 預覽] ====== -->
+  <meta name="description" content="VicGether Technology Co., Ltd. / POWAH ｜ 點一下即可撥打電話、寄信、開啟社群與官網。" />
+  <meta property="og:title" content="Victor Chiu 邱建銓｜VicGether Technology Co., Ltd.｜POWAH 數位名片" />
+  <meta property="og:description" content="點一下就能聯絡我：電話、Email、IG、LINE 官方、YouTube、TikTok、Shopee、官網。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/" />
+  <meta property="og:image" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/victor4.jpg?v=20251107" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Victor Chiu 邱建銓 個人照片" />
+  <meta name="theme-color" content="#FDDC5C" />
+
+  <!-- ====== [CONFIG - 可編輯區] ====== -->
   <script>
     window.CONFIG = {
       name: "Victor Chiu 邱建銓",
-      title: "Founder & CEO｜VicGether Tech.｜POWAH ⚡",
+      title: "Founder & CEO｜VicGether Technology Co., Ltd.｜POWAH ⚡",
       phoneHref: "tel:+886989722838",
       email: "victor.chiu@vicgether.com",
       links: {
@@ -24,7 +36,6 @@
         digitalCard: "BusinessCard.jpg"
       },
       assets: {
-        ogImage: "victor4.jpg",
         hero: "og-cover.jpg?v=20251027",
         avatar: "victor4.jpg",
         companyLogo: "companylogo.png",
@@ -32,18 +43,8 @@
       }
     };
   </script>
-  <!-- ========== END CONFIG ========== -->
 
-  <meta name="description" content="VicGether Tech. / POWAH ｜ 點一下即可撥打電話、寄信、開啟社群與官網。" />
-  <meta property="og:title" content="Victor Chiu 邱建銓｜VicGether Tech.｜POWAH 數位名片" />
-  <meta property="og:description" content="點一下就能聯絡我：電話、Email、IG、LINE 官方、YouTube、TikTok、Shopee、官網。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://victorchiu419git.github.io/Vicgetherbusinesscard/" />
-  <meta property="og:image" content="" id="og-image" />
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="600" />
-  <meta name="theme-color" content="#FDDC5C" />
-
+  <!-- ====== [樣式 - 固定設計區] ====== -->
   <style>
     :root { --brand-yellow:#FDDC5C; --ink:#000; --ink-2:#444; --card:#fff; }
     *{box-sizing:border-box;}
@@ -107,7 +108,7 @@
   <main class="wrap">
     <section class="card">
 
-      <!-- Hero -->
+      <!-- Hero 圖 -->
       <div class="hero"><img id="heroImg" src="" alt="VicGether / POWAH 封面圖"></div>
 
       <!-- 個人資訊 -->
@@ -125,7 +126,7 @@
         <img id="powahLogo" class="powah-logo" src="" alt="POWAH 品牌 Logo" />
       </div>
 
-      <!-- 按鈕群組 -->
+      <!-- 功能按鈕群組 -->
       <div class="grid">
         <a class="btn" id="btnPhone" href="#"><span>📞 電話</span></a>
         <a class="btn" id="btnEmail" href="#"><span>✉️ Email</span></a>
@@ -139,20 +140,19 @@
         <a class="btn" id="btnVCF" href="#" target="_blank" rel="noopener"><span>📇 加入通訊錄</span></a>
       </div>
 
-      <!-- 電子名片區塊 -->
+      <!-- 電子名片 -->
       <div class="ecard">
         <img id="ecardImg" src="" alt="電子名片預覽圖" />
         <a id="ecardLink" href="#" download target="_blank">🔗 查看電子名片</a>
       </div>
 
-      <p class="note">VicGether Technology Co., Ltd. / POWAH © 2025 </p>
+      <p class="note">VicGether Technology Co., Ltd. / POWAH © 2025 ｜ 貼到 LINE 後，點上方按鈕即可立即行動。</p>
     </section>
   </main>
 
-  <!-- Config 注入 -->
+  <!-- ====== [JS - 固定設計區：套用 Config] ====== -->
   <script>
     (function(c){
-      document.getElementById('og-image').setAttribute('content', c.assets.ogImage);
       document.getElementById('heroImg').src = c.assets.hero;
       document.getElementById('avatarImg').src = c.assets.avatar;
       document.getElementById('companyLogo').src = c.assets.companyLogo;
